@@ -7,9 +7,9 @@ study_hours = st.number_input("Study Hours per Week", min_value=0.0, max_value=4
 attendance = st.number_input("Attendance Percentage", min_value=0.0, max_value=100.0,
 value=75.0)
 if st.button("Predict Result"):
- input_data = np.array([[study_hours, attendance]])
- prediction = model.predict(input_data)
+    input_data = np.array([[study_hours, attendance]])
+    prediction = model.predict(input_data)
     if prediction[0] == 1:
-     st.success("Prediction: PASS")
+        st.success("Prediction: PASS")
     else:
-     st.error("Prediction: FAIL")
+        st.error("Prediction: FAIL")
